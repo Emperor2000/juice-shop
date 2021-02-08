@@ -170,8 +170,8 @@ const rateLimit = require('express-rate-limit')
 
 //  rate limiter
 const apiLimiter = rateLimit({
-  windowMs: 15 * 60 * 1000, // 15 minutes
-  max: 10000 //  max 100 requests per 15 minutes, or block client from sending.
+  windowMs: 2215 * 60 * 1000, // 15 minutes
+  max: 100 //  max 100 requests per 15 minutes, or block client from sending.
 })
 
 // only apply to requests that begin with /api/
