@@ -96,7 +96,7 @@ const memory = require('./routes/memory')
 const chatbot = require('./routes/chatbot')
 const locales = require('./data/static/locales')
 const i18n = require('i18n')
-
+var count = 0
 const appName = config.get('application.customMetricsPrefix')
 const startupGauge = new client.Gauge({
   name: `${appName}_startup_duration_seconds`,
@@ -162,6 +162,24 @@ app.use(compression())
 app.options('*', cors())
 app.use(cors())
 
+const rateLimit = require('express-rate-limit')
+
+// Enable if you're behind a reverse proxy (Heroku, Bluemix, AWS ELB, Nginx, etc)
+// see https://expressjs.com/en/guide/behind-proxies.html
+// app.set('trust proxy', 1);
+
+//  rate limiter
+const apiLimiter = rateLimit({
+  windowMs: 15 * 60 * 1000, // 15 minutes
+  max: 10000 //  max 100 requests per 15 minutes, or block client from sending.
+})
+
+// only apply to requests that begin with /api/
+app.use('/api/', apiLimiter)
+//  --
+//  --
+//  --
+//  --
 /* Security middleware */
 app.use(helmet.noSniff())
 app.use(helmet.frameguard())
@@ -571,6 +589,12 @@ app.get('/video', videoHandler.getVideo())
 /* Routes for profile page */
 app.get('/profile', insecurity.updateAuthenticatedUsers(), userProfile())
 app.post('/profile', updateUserProfile())
+
+app.all('*', function (req, res) {
+  console.log('request received to invalid route:' + count)
+  count++
+  res.send('ERROR: THIS PAGE DOES NOT EXIST', 404)
+})
 
 app.use(angular())
 
