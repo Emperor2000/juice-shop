@@ -37,7 +37,9 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
   })
 
   Feedback.associate = ({ User }) => {
-    Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
+    if (User == null || insecurity.isAuthorized()) {
+      Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
+    }
   }
 
   return Feedback
