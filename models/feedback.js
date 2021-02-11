@@ -30,6 +30,9 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
         if (rating <= 0) {
           rating = 1
         }
+        if (rating > 5) {
+          rating = 5
+        }
         this.setDataValue('rating', rating)
         utils.solveIf(challenges.zeroStarsChallenge, () => { return rating === 0 })
       }
@@ -37,9 +40,7 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
   })
 
   Feedback.associate = ({ User }) => {
-    if (User == null || insecurity.isAuthorized()) {
-      Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
-    }
+    Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
   }
 
   return Feedback
