@@ -15,7 +15,7 @@ module.exports = function productReviews () {
     db.reviews.insert({
       product: req.params.id,
       message: req.body.message,
-      author: req.body.author,
+      author: getHiddenAuthor(req.body.author),
       likesCount: 0,
       likedBy: []
     }).then(result => {
@@ -24,4 +24,19 @@ module.exports = function productReviews () {
       res.status(500).json(err)
     })
   }
+}
+
+function getHiddenAuthor (author) {
+  const cutAuthor = author.replace(/@.*/, '')
+  let starredAuthor = ''
+  if (cutAuthor.length > 5) {
+    starredAuthor = splitString(cutAuthor, '***', 3, cutAuthor.length)
+  } else {
+    starredAuthor = splitString(cutAuthor, '***', 0, cutAuthor.length)
+  }
+  return author.replace(/^.+@/, starredAuthor + '@')
+}
+
+function splitString (splitText, replaceText, splitAt, splitTill) {
+  return splitText.substring(0, splitAt) + replaceText + splitText.substring(splitTill)
 }
