@@ -15,6 +15,11 @@ const products = cache.products
 const config = require('config')
 
 exports.forgedFeedbackChallenge = () => (req, res, next) => {
+  if (req.body.UserId == null) {
+    if (!req.body.comment.endsWith('(anonymous)')) {
+      req.body.comment = req.body.comment.replace(/\(.*\)/, '(anonymous)')
+    }
+  }
   utils.solveIf(challenges.forgedFeedbackChallenge, () => {
     const user = insecurity.authenticatedUsers.from(req)
     const userId = user && user.data ? user.data.id : undefined
