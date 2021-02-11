@@ -8,7 +8,7 @@ const insecurity = require('../lib/insecurity')
 const models = require('../models/index')
 const cache = require('../data/datacache')
 const challenges = cache.challenges
-
+const filelogger = require('../utillib/logger')
 module.exports = function changePassword () {
   return ({ query, headers, connection }, res, next) => {
     const currentPassword = query.current
@@ -23,10 +23,14 @@ module.exports = function changePassword () {
       const loggedInUser = insecurity.authenticatedUsers.get(token)
       if (loggedInUser) {
         if (currentPassword && insecurity.hash(currentPassword) !== loggedInUser.data.password) {
+          var datetime = new Date()
+          filelogger.logToFile('MEDIUM : Invalid Password Attempt by User: ' + loggedInUser.data.id + ' at date and time: ' + datetime)
           res.status(401).send(res.__('Current password is not correct.'))
         } else {
           models.User.findByPk(loggedInUser.data.id).then(user => {
             user.update({ password: newPassword }).then(user => {
+              var datetime = new Date()
+              filelogger.logToFile('ACTION : User: ' + loggedInUser.data.id + 'updated password: ' + ' at date and time: ' + datetime)
               utils.solveIf(challenges.changePasswordBenderChallenge, () => { return user.id === 3 && !currentPassword && user.password === insecurity.hash('slurmCl4ssic') })
               res.json({ user })
             }).catch(error => {
@@ -38,6 +42,8 @@ module.exports = function changePassword () {
         }
       } else {
         next(new Error('Blocked illegal activity by ' + connection.remoteAddress))
+        var datetime = new Date()
+        filelogger.logToFile('SEVERE : Malicious Illegal Activity blocked: ' + ' at date and time: ' + datetime)
       }
     }
   }

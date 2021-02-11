@@ -7,7 +7,7 @@
 const insecurity = require('../lib/insecurity')
 const utils = require('../lib/utils')
 const challenges = require('../data/datacache').challenges
-
+const filelogger = require('../utillib/logger')
 module.exports = (sequelize, { STRING, INTEGER }) => {
   const Feedback = sequelize.define('Feedback', {
     comment: {
@@ -27,10 +27,13 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
       type: INTEGER,
       allowNull: false,
       set (rating) {
+        var datetime = new Date()
         if (rating <= 0) {
           rating = 1
+          filelogger.logToFile('SEVERE : Attempt at data manipulation detected: ' + ' at date and time: ' + datetime + 'for property: rating, inserted < minimum of 1')
         }
         if (rating > 5) {
+          filelogger.logToFile('SEVERE : Attempt at data manipulation detected: ' + ' at date and time: ' + datetime + 'for property: rating, inserted > maximum of  5')
           rating = 5
         }
         this.setDataValue('rating', rating)

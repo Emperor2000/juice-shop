@@ -1,0 +1,8 @@
+Server Opened on Port: 3000 at date and time: Thu Feb 11 2021 14:50:08 GMT+0100 (GMT+01:00)SEVERE :
+Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:53:02 GMT+0100 (GMT+01:00) for property: rating, inserted < minimum of 1
+SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:53:15 GMT+0100 (GMT+01:00)for property: rating, inserted > maximum of  5
+Server Opened on Port: 3000 at date and time: Thu Feb 11 2021 14:55:00 GMT+0100 (GMT+01:00)
+SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:56:08 GMT+0100 (GMT+01:00)for property: rating, inserted < minimum of 1
+SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:56:20 GMT+0100 (GMT+01:00)for property: rating, inserted > maximum of  5
+SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:56:27 GMT+0100 (GMT+01:00)for property: rating, inserted < minimum of 1
+MEDIUM : Invalid Password Attempt by User: 1 at date and time: Thu Feb 11 2021 14:57:33 GMT+0100 (GMT+01:00)

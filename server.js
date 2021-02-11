@@ -24,6 +24,7 @@ const swaggerUi = require('swagger-ui-express')
 const RateLimit = require('express-rate-limit')
 const client = require('prom-client')
 const swaggerDocument = yaml.load(fs.readFileSync('./swagger.yml', 'utf8'))
+//const filelogger = require('utillib/logger')
 const {
   ensureFileIsPassed,
   handleZipFileUpload,
@@ -95,6 +96,7 @@ const deluxe = require('./routes/deluxe')
 const memory = require('./routes/memory')
 const chatbot = require('./routes/chatbot')
 const locales = require('./data/static/locales')
+const filelogger = require('./utillib/logger')
 const i18n = require('i18n')
 var count = 0
 const appName = config.get('application.customMetricsPrefix')
@@ -612,6 +614,8 @@ exports.start = async function (readyCallback) {
 
   server.listen(port, () => {
     logger.info(colors.cyan(`Server listening on port ${colors.bold(port)}`))
+    var datetime = new Date()
+    filelogger.logToFile('Server Opened on Port: ' + port + ' at date and time: ' + datetime)
     startupGauge.set({ task: 'ready' }, (Date.now() - startTime) / 1000)
     if (process.env.BASE_PATH !== '') {
       logger.info(colors.cyan(`Server using proxy base path ${colors.bold(process.env.BASE_PATH)} for redirects`))
