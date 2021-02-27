@@ -286,3 +286,25 @@ SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 3
 SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 2
 SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 1
 SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 0
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 14:04:32 GMT+0100 (GMT+01:00)
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:06:17 GMT+0100 (GMT+01:00) from ip: ::1
+User: jantje@gmail.com with authorization/role: customer route: /rest/basket/6 executed at Sat Feb 27 2021 14:06:17 GMT+0100 (GMT+01:00) from ip: ::1
+User: jantje@gmail.com with authorization/role: customer route: /api/Quantitys/ executed at Sat Feb 27 2021 14:06:17 GMT+0100 (GMT+01:00) from ip: ::1
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:06:17 GMT+0100 (GMT+01:00) from ip: ::1
+User: jantje@gmail.com with authorization/role: customer route: /rest/products/search?q= executed at Sat Feb 27 2021 14:06:17 GMT+0100 (GMT+01:00) from ip: ::1
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 14:07:56 GMT+0100 (GMT+01:00)
+User: jantje@gmail.com with authorization/role: customer route: /rest/admin/application-version executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/admin/application-configuration executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/admin/application-configuration executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/admin/application-configuration executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/admin/application-configuration executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 14:08:22 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/login executed at Sat Feb 27 2021 14:08:28 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:08:28 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: jantje@gmail.com with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:08:28 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: testacc@yeet.nl with authorization/role: customer route: /rest/basket/6 executed at Sat Feb 27 2021 14:09:43 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: testacc@yeet.nl with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:09:43 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: testacc@yeet.nl with authorization/role: customer route: /api/Quantitys/ executed at Sat Feb 27 2021 14:09:43 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: testacc@yeet.nl with authorization/role: customer route: /rest/products/search?q= executed at Sat Feb 27 2021 14:09:43 GMT+0100 (GMT+01:00) from ip: ::1 undefined
+User: testacc@yeet.nl with authorization/role: customer route: /rest/user/whoami executed at Sat Feb 27 2021 14:09:43 GMT+0100 (GMT+01:00) from ip: ::1 undefined

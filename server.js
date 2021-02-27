@@ -206,13 +206,12 @@ app.use(metrics.observeRequestMetricsMiddleware())
 const securityTxtExpiration = new Date()
 securityTxtExpiration.setFullYear(securityTxtExpiration.getFullYear() + 1)
 app.all('*', (req, res, next) => {
-  console.log('LOG')
   const token = req.headers.authorization ? req.headers.authorization.substr('Bearer='.length) : null
   if (token) {
     const loggedInUser = insecurity.authenticatedUsers.get(token)
     if (loggedInUser) {
       console.log('header: ' + JSON.stringify(req.headers))
-      filelogger.logToFile('User: ' + loggedInUser.data.email + ' with authorization/role: ' + loggedInUser.data.role + ' route: ' + req.url + ' executed at ' + new Date() + ' from ip: ' + loggedInUser.data.lastLoginIp)
+      filelogger.logToFile('User: ' + loggedInUser.data.email + ' with authorization/role: ' + loggedInUser.data.role + ' route: ' + req.url + ' executed at ' + new Date() + ' from ip: ' + req.connection.remoteAddress + ' ' + loggedInUser.data.lastLoginIp)
     }
   }
   next()
@@ -603,8 +602,6 @@ app.get('/video', videoHandler.getVideo())
 /* Routes for profile page */
 app.get('/profile', insecurity.updateAuthenticatedUsers(), userProfile())
 app.post('/profile', updateUserProfile())
-
-
 /*rate limiter fallback*/
 app.all('*', function (req, res) {
   console.log('request received to invalid route:' + count)
