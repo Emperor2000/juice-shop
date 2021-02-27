@@ -4,6 +4,7 @@
  */
 
 const utils = require('../lib/utils')
+const hider = require('../utillib/regex')
 const insecurity = require('../lib/insecurity')
 const jwt = require('jsonwebtoken')
 const jws = require('jws')
@@ -15,11 +16,18 @@ const products = cache.products
 const config = require('config')
 
 exports.forgedFeedbackChallenge = () => (req, res, next) => {
-  if (req.body.UserId == null) {
-    if (!req.body.comment.endsWith('(anonymous)')) {
+  const token = req.headers.authorization ? req.headers.authorization.substr('Bearer='.length) : null
+  if (token) {
+    const loggedInUser = insecurity.authenticatedUsers.get(token)
+    if (loggedInUser) {
+      req.body.comment = req.body.comment.replace(/\(.*\)/, `(${hider.getHiddenAuthor(loggedInUser.data.email)})`)
+    } else {
       req.body.comment = req.body.comment.replace(/\(.*\)/, '(anonymous)')
     }
+  } else {
+    req.body.comment = req.body.comment.replace(/\(.*\)/, '(anonymous)')
   }
+
   utils.solveIf(challenges.forgedFeedbackChallenge, () => {
     const user = insecurity.authenticatedUsers.from(req)
     const userId = user && user.data ? user.data.id : undefined
