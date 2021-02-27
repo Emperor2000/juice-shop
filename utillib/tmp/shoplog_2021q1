@@ -6,3 +6,283 @@ SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 20
 SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:56:20 GMT+0100 (GMT+01:00)for property: rating, inserted > maximum of  5
 SEVERE : Attempt at data manipulation detected:  at date and time: Thu Feb 11 2021 14:56:27 GMT+0100 (GMT+01:00)for property: rating, inserted < minimum of 1
 MEDIUM : Invalid Password Attempt by User: 1 at date and time: Thu Feb 11 2021 14:57:33 GMT+0100 (GMT+01:00)
+Action by User: ({ User }) => {
+    Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
+  }
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 11:40:03 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 11:42:13 GMT+0100 (GMT+01:00)
+Action by User: ({ User }) => {
+    Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
+  }
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 11:44:17 GMT+0100 (GMT+01:00)
+Action by User: class extends Model {}
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 11:48:43 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:32:46 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:35:26 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:38:18 GMT+0100 (GMT+01:00)
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/basket/1
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/user/whoami
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /api/Quantitys/
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/products/search?q=
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/user/whoami
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/user/whoami
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/user/whoami
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/captcha/
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /api/Feedbacks/
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/user/whoami
+User: {"status":"success","data":{"id":1,"username":"","email":"admin@juice-sh.op","password":"0192023a7bbd73250516f069df18b500","role":"admin","deluxeToken":"","lastLoginIp":"0.0.0.0","profileImage":"assets/public/images/uploads/defaultAdmin.png","totpSecret":"","isActive":true,"createdAt":"2021-02-27 11:38:15.577 +00:00","updatedAt":"2021-02-27 11:38:15.577 +00:00","deletedAt":null},"iat":1614425944,"exp":1614443944,"bid":1} route: /rest/captcha/
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:43:30 GMT+0100 (GMT+01:00)
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:44:24 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /api/Feedbacks/ executed at Sat Feb 27 2021 12:44:34 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:44:34 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:44:34 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:46:12 GMT+0100 (GMT+01:00)
+User: undefined with id: undefined route: /rest/admin/application-version executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:46:14 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:46:15 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /api/Feedbacks/ executed at Sat Feb 27 2021 12:46:19 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:46:19 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:46:19 GMT+0100 (GMT+01:00) from ip: [object Object]
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:48:30 GMT+0100 (GMT+01:00)
+User: undefined with id: undefined route: /rest/languages executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-version executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:49:17 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /api/Feedbacks/ executed at Sat Feb 27 2021 12:49:24 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:49:24 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/captcha/ executed at Sat Feb 27 2021 12:49:24 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/basket/1 executed at Sat Feb 27 2021 12:49:37 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefined with id: undefined route: /rest/user/whoami executed at Sat Feb 27 2021 12:49:37 GMT+0100 (GMT+01:00) from ip: [object Object]
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:51:17 GMT+0100 (GMT+01:00)
+User: undefinedroute: /rest/admin/application-version executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/basket/1 executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:21 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:51:22 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /assets/i18n/en.json executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-version executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/languages executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-version executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/products/search?q= executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Quantitys/ executed at Sat Feb 27 2021 12:51:31 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:32 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:32 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:51:32 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:51:32 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:33 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:34 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:51:34 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Feedbacks/ executed at Sat Feb 27 2021 12:51:44 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:51:44 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:51:44 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/saveLoginIp executed at Sat Feb 27 2021 12:52:22 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/basket/1 executed at Sat Feb 27 2021 12:52:25 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:52:25 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Quantitys/ executed at Sat Feb 27 2021 12:52:25 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/products/search?q= executed at Sat Feb 27 2021 12:52:25 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:52:25 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:52:39 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:52:39 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /api/Feedbacks/ executed at Sat Feb 27 2021 12:52:46 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:52:46 GMT+0100 (GMT+01:00) from ip: [object Object]
+User: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:52:46 GMT+0100 (GMT+01:00) from ip: [object Object]
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:57:30 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 12:58:35 GMT+0100 (GMT+01:00)
+User: undefined with authorization/role: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 12:58:38 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /api/Feedbacks/ executed at Sat Feb 27 2021 12:58:50 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 12:58:50 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 12:58:50 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:02:31 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:04:24 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:07:52 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:09:10 GMT+0100 (GMT+01:00)
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-version executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/captcha/ executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/user/whoami executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+User: undefined with authorization/role: undefinedroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:09:22 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:14:50 GMT+0100 (GMT+01:00)
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/languages executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/admin/application-version executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/user/whoami executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/captcha/ executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/user/whoami executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:15:16 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /api/Feedbacks/ executed at Sat Feb 27 2021 13:15:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/captcha/ executed at Sat Feb 27 2021 13:15:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: adminroute: /rest/user/whoami executed at Sat Feb 27 2021 13:15:28 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:21:09 GMT+0100 (GMT+01:00)
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:21:15 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Feedbacks/ executed at Sat Feb 27 2021 13:21:50 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:21:50 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:21:50 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:22:23 GMT+0100 (GMT+01:00)
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:22:25 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Feedbacks/ executed at Sat Feb 27 2021 13:22:36 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:22:36 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:22:36 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:23:27 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:24:26 GMT+0100 (GMT+01:00)
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-version executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:24:28 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /api/Feedbacks/ executed at Sat Feb 27 2021 13:24:34 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:24:34 GMT+0100 (GMT+01:00) from ip: undefined
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:24:34 GMT+0100 (GMT+01:00) from ip: undefined
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:26:50 GMT+0100 (GMT+01:00)
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/admin/application-configuration executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /api/Challenges/?name=Score%20Board executed at Sat Feb 27 2021 13:26:51 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /api/Feedbacks/ executed at Sat Feb 27 2021 13:27:04 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:04 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/captcha/ executed at Sat Feb 27 2021 13:27:04 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/saveLoginIp executed at Sat Feb 27 2021 13:27:24 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:31 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/basket/1 executed at Sat Feb 27 2021 13:27:31 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:31 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /api/Quantitys/ executed at Sat Feb 27 2021 13:27:31 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/products/search?q= executed at Sat Feb 27 2021 13:27:31 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/basket/1 executed at Sat Feb 27 2021 13:27:32 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:32 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: admin@juice-sh.op with authorization/role: admin route: /rest/saveLoginIp executed at Sat Feb 27 2021 13:27:34 GMT+0100 (GMT+01:00) from ip: 127.0.0.1
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/basket/6 executed at Sat Feb 27 2021 13:27:40 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:40 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /api/Quantitys/ executed at Sat Feb 27 2021 13:27:40 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/products/search?q= executed at Sat Feb 27 2021 13:27:40 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:40 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/basket/6 executed at Sat Feb 27 2021 13:27:41 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/user/whoami executed at Sat Feb 27 2021 13:27:41 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+User: bjoern.kimminich@gmail.com with authorization/role: admin route: /rest/saveLoginIp executed at Sat Feb 27 2021 13:27:43 GMT+0100 (GMT+01:00) from ip: 0.0.0.0
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:31:45 GMT+0100 (GMT+01:00)
+Action by User:
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:36:10 GMT+0100 (GMT+01:00)
+Action by User: 
+Action by User: 
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:40:06 GMT+0100 (GMT+01:00)
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+LOW: Receiving unusual amount of requests
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:42:14 GMT+0100 (GMT+01:00)
+LOW: Receiving unusual amount of requests
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: User sent too many requests in short time-span, [Action = blocked]
+SEVERE: User sent too many requests in short time-span, [Action = blocked]
+SEVERE: User sent too many requests in short time-span, [Action = blocked]
+SEVERE: User sent too many requests in short time-span, [Action = blocked]
+SEVERE: User sent too many requests in short time-span, [Action = blocked]
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:43:48 GMT+0100 (GMT+01:00)
+LOW: Receiving unusual amount of requests
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+NaN
+NaN
+NaN
+NaN
+NaN
+Server Opened on Port: 3000 at date and time: Sat Feb 27 2021 13:44:54 GMT+0100 (GMT+01:00)
+LOW: Receiving unusual amount of requests
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: Potential attempt at Denial of Service detected
+SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 4
+SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 3
+SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 2
+SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 1
+SEVERE: User sent too many requests in short time-span, [Action = blocked] in: 0

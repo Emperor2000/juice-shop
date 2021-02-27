@@ -33,7 +33,7 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
           filelogger.logToFile('SEVERE : Attempt at data manipulation detected: ' + ' at date and time: ' + datetime + 'for property: rating, inserted < minimum of 1')
         }
         if (rating > 5) {
-          filelogger.logToFile('SEVERE : Attempt at data manipulation detected: ' + ' at date and time: ' + datetime + 'for property: rating, inserted > maximum of  5')
+          filelogger.logToFile('SEVERE : Attempt at data manipulation detected: ' + ' at date and time: ' + datetime + 'for property: rating, inserted > maximum of  5' + User.get())
           rating = 5
         }
         this.setDataValue('rating', rating)
@@ -41,10 +41,8 @@ module.exports = (sequelize, { STRING, INTEGER }) => {
       }
     }
   })
-
   Feedback.associate = ({ User }) => {
     Feedback.belongsTo(User) // no FK constraint to allow anonymous feedback posts
   }
-
   return Feedback
 }

@@ -205,6 +205,18 @@ app.use(metrics.observeRequestMetricsMiddleware())
 /* Security Policy */
 const securityTxtExpiration = new Date()
 securityTxtExpiration.setFullYear(securityTxtExpiration.getFullYear() + 1)
+app.all('*', (req, res, next) => {
+  console.log('LOG')
+  const token = req.headers.authorization ? req.headers.authorization.substr('Bearer='.length) : null
+  if (token) {
+    const loggedInUser = insecurity.authenticatedUsers.get(token)
+    if (loggedInUser) {
+      console.log('header: ' + JSON.stringify(req.headers))
+      filelogger.logToFile('User: ' + loggedInUser.data.email + ' with authorization/role: ' + loggedInUser.data.role + ' route: ' + req.url + ' executed at ' + new Date() + ' from ip: ' + loggedInUser.data.lastLoginIp)
+    }
+  }
+  next()
+})
 app.get(['/.well-known/security.txt', '/security.txt'], verify.accessControlChallenges())
 app.use(['/.well-known/security.txt', '/security.txt'], securityTxt({
   contact: config.get('application.securityTxt.contact'),
@@ -592,9 +604,19 @@ app.get('/video', videoHandler.getVideo())
 app.get('/profile', insecurity.updateAuthenticatedUsers(), userProfile())
 app.post('/profile', updateUserProfile())
 
+
+/*rate limiter fallback*/
 app.all('*', function (req, res) {
   console.log('request received to invalid route:' + count)
   count++
+  var remainder = 100 - count;
+  if (count > 80 && count < 82) {
+    filelogger.logToFile('LOW: Receiving unusual amount of requests')
+  } else if (count > 90 && count < 95) {
+    filelogger.logToFile('SEVERE: Potential attempt at Denial of Service detected')
+  } else if (count > 95) {
+    filelogger.logToFile('SEVERE: User sent too many requests in short time-span, [Action = blocked] in: ' + remainder)
+  }
   res.send('ERROR: THIS PAGE DOES NOT EXIST', 404)
 })
 
