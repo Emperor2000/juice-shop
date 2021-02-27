@@ -8,6 +8,7 @@ const insecurity = require('../lib/insecurity')
 const models = require('../models/index')
 const challenges = require('../data/datacache').challenges
 const users = require('../data/datacache').users
+const regex = require('../utillib/regex')
 const config = require('config')
 
 module.exports = function login () {
@@ -26,34 +27,43 @@ module.exports = function login () {
 
   return (req, res, next) => {
     verifyPreLoginChallenges(req)
-    models.sequelize.query(`SELECT * FROM Users WHERE email = '${req.body.email || ''}' AND password = '${insecurity.hash(req.body.password || '')}' AND deletedAt IS NULL`, { model: models.User, plain: true })
-      .then((authenticatedUser) => {
-        let user = utils.queryResultToJson(authenticatedUser)
-        const rememberedEmail = insecurity.userEmailFrom(req)
-        if (rememberedEmail && req.body.oauth) {
-          models.User.findOne({ where: { email: rememberedEmail } }).then(rememberedUser => {
-            user = utils.queryResultToJson(rememberedUser)
-            utils.solveIf(challenges.loginCisoChallenge, () => { return user.data.id === users.ciso.id })
-            afterLogin(user, res, next)
-          })
-        } else if (user.data && user.data.id && user.data.totpSecret !== '') {
-          res.status(401).json({
-            status: 'totp_token_required',
-            data: {
-              tmpToken: insecurity.authorize({
-                userId: user.data.id,
-                type: 'password_valid_needs_second_factor_token'
-              })
-            }
-          })
-        } else if (user.data && user.data.id) {
-          afterLogin(user, res, next)
-        } else {
-          res.status(401).send(res.__('Invalid email or password.'))
-        }
-      }).catch(error => {
-        next(error)
+    if (regex.validateEmail(req.body.email)) {
+      models.sequelize.query(`SELECT * FROM Users WHERE email = '${req.body.email || ''}' AND password = '${insecurity.hash(req.body.password || '')}' AND deletedAt IS NULL`, {
+        model: models.User,
+        plain: true
       })
+        .then((authenticatedUser) => {
+          let user = utils.queryResultToJson(authenticatedUser)
+          const rememberedEmail = insecurity.userEmailFrom(req)
+          if (rememberedEmail && req.body.oauth) {
+            models.User.findOne({ where: { email: rememberedEmail } }).then(rememberedUser => {
+              user = utils.queryResultToJson(rememberedUser)
+              utils.solveIf(challenges.loginCisoChallenge, () => {
+                return user.data.id === users.ciso.id
+              })
+              afterLogin(user, res, next)
+            })
+          } else if (user.data && user.data.id && user.data.totpSecret !== '') {
+            res.status(401).json({
+              status: 'totp_token_required',
+              data: {
+                tmpToken: insecurity.authorize({
+                  userId: user.data.id,
+                  type: 'password_valid_needs_second_factor_token'
+                })
+              }
+            })
+          } else if (user.data && user.data.id) {
+            afterLogin(user, res, next)
+          } else {
+            res.status(401).send(res.__('Invalid email or password.'))
+          }
+        }).catch(error => {
+          next(error)
+        })
+    } else {
+      res.status(401).send(res.__('Invalid email or password.'))
+    }
   }
 
   function verifyPreLoginChallenges (req) {
